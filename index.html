@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Betsy Flores</title>
+<style>
+:root{--nav:#1a0000;--red:#8b0000;--gold:#ffcc00;--bg:#fff;--soft:#e6e6e6;--ink:#333;--mute:#777;--foot:#161616;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#1b1b1b;--soft:#262626;--ink:#eee;--mute:#b5b5b5}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#1b1b1b;--soft:#262626;--ink:#eee;--mute:#b5b5b5}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Open Sans",Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+nav{position:fixed;top:0;left:0;right:0;height:70px;background:var(--nav);display:flex;align-items:center;justify-content:space-between;padding:0 55px;z-index:20;padding-top:env(safe-area-inset-top,0px);height:calc(70px + env(safe-area-inset-top,0px))}
+.logo{width:60px;height:60px;border-radius:50%;border:4px solid var(--gold);background:#c0392b;color:#fff;display:grid;place-items:center;font-weight:700;font-size:20px}
+nav ul{list-style:none;display:flex;gap:38px;margin:0;padding:0}
+nav a{color:#fff;text-decoration:none;font-size:15px}
+nav a:hover,nav a:focus-visible{color:var(--gold);outline:none}
+.social{position:fixed;left:0;top:200px;z-index:15;display:flex;flex-direction:column}
+.social a{width:50px;height:36px;display:grid;place-items:center;color:#fff;text-decoration:none;font-weight:700;font-size:15px}
+.social a:nth-child(1){background:#3b5998}.social a:nth-child(2){background:#f00}.social a:nth-child(3){background:#55acee}.social a:nth-child(4){background:#dd4b39}
+#inicio{background:var(--red);color:#fff;text-align:center;padding:215px 20px 160px}
+.avatar{width:250px;height:250px;border-radius:50%;border:10px solid #fff;margin:0 auto 20px;background:#8fc3c9;display:grid;place-items:center;font-size:96px;font-weight:800;color:#fff;background:linear-gradient(145deg,#e4a0a0,#8b0000 80%)}
+h1{font-size:50px;margin:0 0 20px;letter-spacing:1px}
+#inicio p{max-width:1470px;margin:0 auto;font-size:17px;line-height:1.8}
+section{padding:30px 0}
+.wrap{max-width:1530px;margin:0 auto;padding:0 190px}
+h2{font-size:30px;margin:0;text-transform:uppercase}
+.sobre h2{border-bottom:1px solid var(--mute);display:inline-block;padding-bottom:6px;min-width:550px}
+.sobre p{color:var(--mute);max-width:915px;font-size:17px;line-height:1.8}
+.btn{display:inline-block;background:var(--gold);color:#222;border:0;border-radius:5px;padding:10px 12px;font-size:13px;text-transform:uppercase;text-decoration:none;cursor:pointer}
+.title{text-align:center;font-size:24px;margin:0;font-weight:700;text-transform:uppercase}
+.rule{height:1px;background:var(--mute);margin:6px auto 22px}
+.esp .rule{max-width:1525px}
+.esp .grid{display:flex;justify-content:space-around;gap:20px;flex-wrap:wrap;padding-bottom:40px}
+.tile{width:220px;height:150px;border-radius:2px}
+#servicios{background:linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.72)),repeating-linear-gradient(45deg,#222 0 20px,#111 20px 40px);color:#fff;text-align:center;padding:30px 0 40px}
+#servicios .rule{background:#fff;max-width:570px}
+.serv{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;max-width:1530px;margin:0 auto;padding:0 190px}
+.serv div{padding:15px 0;font-size:17px;line-height:1.75}
+.serv b{display:block;font-size:19px;font-family:inherit}
+.serv i{font-style:normal;font-size:18px;display:block}
+.port .rule{max-width:570px;margin-bottom:45px}
+.pgrid{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;max-width:1600px;margin:0 auto;padding:0 20px 60px}
+.pgrid a{width:300px;height:150px;border-radius:2px;color:#fff;text-decoration:none;display:grid;place-items:center;text-align:center;font-weight:600;padding:12px;font-size:17px;transition:transform .2s}
+.pgrid a:hover,.pgrid a:focus-visible{transform:scale(1.03);outline:2px solid var(--gold)}
+#testimonio{background:var(--red);color:#fff;text-align:center;padding:30px 0 50px}
+#testimonio h2{color:var(--gold);text-transform:none;font-size:32px;margin-bottom:30px}
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;max-width:1300px;margin:0 auto;padding:0 20px}
+.ph{width:250px;height:250px;border-radius:50%;border:5px solid var(--gold);margin:0 auto 15px;display:grid;place-items:center;font-size:80px;font-weight:700;color:rgba(255,255,255,.9)}
+.tgrid h3{margin:0 0 10px;font-size:23px}
+.tgrid p{max-width:300px;margin:0 auto 10px;font-size:17px;line-height:1.75}
+.tgrid small{letter-spacing:18px;font-size:13px}
+#contacto{background:var(--soft);padding:30px 30px 60px}
+#contacto .rule{max-width:560px}
+.cgrid{display:grid;grid-template-columns:1.9fr 1fr;gap:48px;align-items:start}
+.cimg{height:480px;border-radius:2px;background:linear-gradient(135deg,#d9d2c5,#8b6b4a 60%,#4b2e1c)}
+.box{background:var(--bg);border:5px solid var(--bg);padding:16px 14px}
+.box h3{text-align:center;margin:0;font-size:18px}
+.box .sub{text-align:center;font-size:12px;font-weight:700;margin:0 0 14px}
+.box label{display:block;font-size:13px;margin-top:10px}
+.box input,.box textarea{width:100%;border:1px solid var(--gold);padding:7px 10px;font:13px inherit;font-family:inherit;margin-top:4px;background:#fff;color:#222}
+.box textarea{height:160px;resize:vertical}
+.box .btn{display:block;margin:12px auto 0;padding:10px 60px}
+#msg{text-align:center;font-size:13px;margin:8px 0 0;min-height:1em}
+footer{background:var(--foot);color:#fff;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:25px 170px;font-size:18px;line-height:1.7}
+footer div:nth-child(2){text-align:center}
+.don{display:inline-block;background:var(--gold);color:#222;border-radius:14px;padding:1px 22px;font-size:14px;font-weight:700}
+@media (max-width:1100px){nav{padding:0 20px}nav ul{gap:16px}.wrap,.serv{padding:0 30px}.serv{grid-template-columns:repeat(2,1fr)}.tgrid,.cgrid,footer{grid-template-columns:1fr}footer{padding:25px 30px}footer div:nth-child(2){text-align:left}.sobre h2{min-width:0}}
+@media (max-width:700px){nav ul{display:none}.social{top:auto;bottom:20px;flex-direction:row}.social a{width:40px}.avatar{width:190px;height:190px;font-size:70px}h1{font-size:38px}.serv{grid-template-columns:1fr}.cimg{height:240px}}
+</style>
+</head>
+<body>
+<nav>
+  <a class="logo" href="#inicio" aria-label="Inicio">BF</a>
+  <ul>
+    <li><a href="#inicio">Inicio</a></li><li><a href="#sobre">Sobre mí</a></li><li><a href="#servicios">Servicios</a></li>
+    <li><a href="#portafolio">Portafolio</a></li><li><a href="#testimonio">Testimonio</a></li><li><a href="#contacto">Contacto</a></li>
+  </ul>
+</nav>
+<div class="social" aria-label="Redes sociales">
+  <a href="#contacto" title="Facebook">f</a><a href="#contacto" title="YouTube">▶</a><a href="#contacto" title="Twitter">t</a><a href="#contacto" title="Instagram">◎</a>
+</div>
+
+<header id="inicio">
+  <div class="avatar" role="img" aria-label="Foto de Betsy Flores">BF</div>
+  <h1>BETSY FLORES</h1>
+  <p>Soy una profesional con mucha experiencia en el área de la docencia y el diseño, especializada en programas como Office, Adobe y Autodesk, animación en 2D y 3D, y también diseño y desarrollo todo tipo de páginas web.</p>
+</header>
+
+<section id="sobre" class="sobre"><div class="wrap">
+  <h2>Sobre mí</h2>
+  <p>Soy una profesional con mucha experiencia en la docencia y el diseño, especializada en programas como Office, Adobe y Autodesk, animación en 2D y 3D. También diseño y desarrollo todo tipo de páginas web.</p>
+  <a class="btn" href="#contacto">Descargar currículum</a>
+</div></section>
+
+<section class="esp"><div class="wrap" style="max-width:1730px;padding:0 190px">
+  <h2 class="title">Especialidad</h2><div class="rule"></div>
+  <div class="grid">
+    <div class="tile" style="background:linear-gradient(135deg,#f6d365,#fda085)"></div>
+    <div class="tile" style="background:linear-gradient(135deg,#84fab0,#8fd3f4)"></div>
+    <div class="tile" style="background:linear-gradient(135deg,#667eea,#764ba2)"></div>
+    <div class="tile" style="background:linear-gradient(135deg,#43c6ac,#191654)"></div>
+  </div>
+</div></section>
+
+<section id="servicios">
+  <h2 class="title">Servicios</h2><div class="rule"></div>
+  <div class="serv">
+    <div><i>✎</i><b>Branding</b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet iste quibusdam ratione, velit in et.</div>
+    <div><i>▭</i><b>Ordenador</b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet iste quibusdam ratione, velit in et.</div>
+    <div><i>♥</i><b>Corazón</b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet iste quibusdam ratione, velit in et.</div>
+    <div><i>◉</i><b>Ojos</b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet iste quibusdam ratione, velit in et.</div>
+    <div><i>✦</i><b>Foco</b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet iste quibusdam ratione, velit in et.</div>
+  </div>
+  <div class="serv" style="grid-template-columns:1fr"><div><i>🏆</i><b>Copa</b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet iste quibusdam ratione, velit in et.</div></div>
+</section>
+
+<section id="portafolio" class="port">
+  <h2 class="title">Portafolio</h2><div class="rule"></div>
+  <div class="pgrid">
+    <a href="#" style="background:linear-gradient(135deg,#3a2f3a,#6b5b6b)">Sesiones por desarrollar</a>
+    <a href="#" style="background:linear-gradient(180deg,#5b5ea6,#c9a0c9)">Betsy Flores · Docente web responsive</a>
+    <a href="#" style="background:linear-gradient(135deg,#f5f5f5,#cfd8dc);color:#222">Nuevas tecnologías 2026</a>
+    <a href="#" style="background:linear-gradient(135deg,#1c2a5a,#4a5a8a)">Gran venta de producto</a>
+    <a href="#" style="background:linear-gradient(135deg,#2a8fd0,#7ec8e8)">Clínica dental centro</a>
+    <a href="#" style="background:linear-gradient(135deg,#0e5a8a,#d9a441)">Agencia de turismo</a>
+    <a href="#" style="background:linear-gradient(135deg,#f2b705,#555)">Empresa de construcción</a>
+    <a href="#" style="background:linear-gradient(135deg,#2d4a3a,#14202a)">Betsy Flores · Aprende los mejores cursos</a>
+  </div>
+</section>
+
+<section id="testimonio">
+  <h2>Testimonios</h2>
+  <div class="tgrid">
+    <div><div class="ph" style="background:linear-gradient(#f5b5c0,#f9d9d0)">J</div><h3>Jane Doe</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tempus vulputate elit, egestas aliquet quam. Vivamus pulvinar in orci egestas mattis.</p><small>f t in</small></div>
+    <div><div class="ph" style="background:linear-gradient(#444,#1c1c1c)">J</div><h3>Jhon Doe</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tempus vulputate elit, egestas aliquet quam. Vivamus pulvinar in orci egestas mattis.</p><small>f t in</small></div>
+    <div><div class="ph" style="background:linear-gradient(#a9cfe0,#6aa0bd)">I</div><h3>Irene Doe</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tempus vulputate elit, egestas aliquet quam. Vivamus pulvinar in orci egestas mattis.</p><small>f t in</small></div>
+  </div>
+</section>
+
+<section id="contacto">
+  <h2 class="title">Contacto</h2><div class="rule"></div>
+  <div class="cgrid">
+    <div class="cimg" role="img" aria-label="Escritorio con computadora"></div>
+    <div class="box">
+      <h3>Informes</h3><p class="sub">Consulta para más información</p>
+      <label for="n">Nombre completo *</label><input id="n" placeholder="Ingrese su nombre completo">
+      <label for="c">Correo electrónico *</label><input id="c" type="email" placeholder="Ingrese su correo">
+      <label for="t">Teléfono *</label><input id="t" type="tel" placeholder="Ingrese su teléfono">
+      <label for="q">Consulta</label><textarea id="q"></textarea>
+      <button class="btn" id="send" type="button">Enviar</button>
+      <p id="msg" role="status"></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div>2026 © Derechos reservados a Betsy Flores. Creado y desarrollado por Betsy Flores.</div>
+  <div>Pide mi plantilla web con un donativo<br><span class="don">Donate</span></div>
+  <div>Betsy Flores | Desarrolladora y diseñadora web</div>
+</footer>
+
+<script>
+document.getElementById('send').addEventListener('click',function(){
+  var n=document.getElementById('n').value.trim(),c=document.getElementById('c').value.trim(),t=document.getElementById('t').value.trim();
+  document.getElementById('msg').textContent=(n&&c&&t)?'Gracias, '+n+'. Tu consulta quedó lista para enviar.':'Completa nombre, correo y teléfono.';
+});
+</script>
+</body>
+</html>
